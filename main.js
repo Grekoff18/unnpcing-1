@@ -48,193 +48,108 @@ function addRoom(){
     
 }
 
+
 function displayRooms(){
     console.log('display')
     let output = '';
     for(let room in rooms){
         console.log(rooms[room].date)
+        
+        
         if(rooms[room].date == today.toDateString()){
+            output += 
+            '<div class="room" style="display: block">' +
+                    '<div class="room-main">' +
+                        '<div class="room-main-horizontal">' +
+                            '<strong>' +
+                                'room-main-horizontal' +
+                                '</strong>' +
+                        '</div>' +
+                        '<div class="room-main-main">' +
+                            '<div class="room-main-main-calendar">' + 
+                                'room-main-main-calendar' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                        '<div class="room-room">'+
+                            '<div class="room-room-horizontal">' +
+                                '<div class="room-room-horizontal-item">' +
+                                    'room-room-horizontal-item 1' +
+                                '</div>'+
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 2'+
+                                '</div>'+
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 3'+
+                                '</div>' +
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 4'+
+                                '</div>' +
+                                '</div>' +
+                                '<div class="room-room-main">' +
+                                    '<div class="room-room-main-calendar">' +
+                                        '<div class="room-room-main-calendar-item">'+
+                                            'room-room-main-calendar-item 1'+
+                                        '</div>'+
+                                        '<div class="room-room-main-calendar-item">'+
+                                            'room-room-main-calendar-item 2'+
+                                        '</div>'+
+                                        '<div class="room-room-main-calendar-item">'+
+                                            'room-room-main-calendar-item 3'+
+                                        '</div>'+
+                                        '<div class="room-room-main-calendar-item">'+
+                                            'room-room-main-calendar-item 4'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>' +
+                        '</div>' +
+                '</div>';
 
             
-
-            output += '<div class="room" style="display: block">' +
-            '<div class="room-main">' +
-                '<div class="room-main-horizontal">' +
-                    '<strong>' +
-                        'room-main-horizontal' +
-                        '</strong>' +
-                '</div>' +
-                '<div class="room-main-main">' +
-                    '<div class="room-main-main-calendar">' + 
-                        'room-main-main-calendar' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-            '<div class="room-room">'+
-                '<div class="room-room-horizontal">' +
-                    '<div class="room-room-horizontal-item">' +
-                        'room-room-horizontal-item 1' +
-                    '</div>'+
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 2'+
-                    '</div>'+
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 3'+
-                    '</div>' +
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 4'+
-                    '</div>' +
-                    '</div>' +
-                    '<div class="room-room-main">' +
-                        '<div class="room-room-main-calendar">' +
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 1'+
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 2'+
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 3'+
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 4'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'+
-                '</div>' +
-            '</div>';
-
             
-            
+        
+        
         } else if(rooms[room].date == fun1().toDateString()){
-            output += '<div class="room" style="display: block">' +
-            '<div class="room-main">' +
-                '<div class="room-main-horizontal">' +
-                    '<strong>' +
-                        'room-main-horizontal' +
-                        '</strong>' +
-                '</div>' +
-                '<div class="room-main-main">' +
-                    '<div class="room-main-main-calendar">' + 
-                        
-                    '</div>' +
-                    '<div class="room-main-main-calendar">' + 
-                        'room-main-main-calendar' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-            '<div class="room-room">'+
-                '<div class="room-room-horizontal">' +
-                    
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 2'+
-                    '</div>'+
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 3'+
-                    '</div>' +
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 4'+
-                    '</div>' +
-                    '</div>' +
-                    '<div class="room-room-main">' +
-                        '<div class="room-room-main-calendar">' +
-                        '<div class="room-room-horizontal-item">' +
-                        'room-room-horizontal-item 1' +
-                    '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
+            output += 
+            '<div class="room" style="display: block">' +
+                    '<div class="room-main">' +
+                        '<div class="room-main-horizontal">' +
+                            '<strong>' +
+                                'room-main-horizontal' +
+                                '</strong>' +
+                        '</div>' +
+                        '<div class="room-main-main">' +
+                            '<div class="room-main-main-calendar">' + 
                                 
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                        '</div>'+
-                        '<div class="room-room-main-calendar">' +
-                        '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 1'+
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 2'+
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 3'+
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                'room-room-main-calendar-item 4'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'+
-                '</div>' +
-            '</div>';
-        } else if(rooms[room].date == fun2().toDateString()){
-            output += '<div class="room" style="display: block">' +
-            '<div class="room-main">' +
-                '<div class="room-main-horizontal">' +
-                    '<strong>' +
-                        'room-main-horizontal' +
-                        '</strong>' +
-                '</div>' +
-                '<div class="room-main-main">' +
-                    '<div class="room-main-main-calendar">' + 
-                        
+                            '</div>' +
+                            '<div class="room-main-main-calendar">' + 
+                                'room-main-main-calendar' +
+                            '</div>' +
+                        '</div>' +
                     '</div>' +
-                    '<div class="room-main-main-calendar">' + 
-                        
-                    '</div>' +
-                    '<div class="room-main-main-calendar">' + 
-                        'room-main-main-calendar' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-            '<div class="room-room">'+
-                '<div class="room-room-horizontal">' +
-                    '<div class="room-room-horizontal-item">' +
-                        'room-room-horizontal-item 1' +
-                    '</div>'+
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 2'+
-                    '</div>'+
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 3'+
-                    '</div>' +
-                    '<div class="room-room-horizontal-item">'+
-                        'room-room-horizontal-item 4'+
-                    '</div>' +
-                    '</div>' +
-                    '<div class="room-room-main">' +
-                        '<div class="room-room-main-calendar">' +
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                        '</div>'+
-                        '<div class="room-room-main-calendar">' +
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                            '<div class="room-room-main-calendar-item">'+
-                                
-                            '</div>'+
-                        '</div>'+
 
-                        '<div class="room-room-main-calendar">' +
-                            '<div class="room-room-main-calendar-item">'+
+
+                    '<div class="room-room">'+
+
+                        '<div class="room-room-horizontal">' +
+                                '<div class="room-room-horizontal-item">' +
+                                    'room-room-horizontal-item 1' +
+                                '</div>'+
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 2'+
+                                '</div>'+
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 3'+
+                                '</div>' +
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 4'+
+                                '</div>' +
+                        '</div>' +
+
+                        '<div class="room-room-main">' +
+                            '<div class="room-room-main-calendar">' +
+                                '<div class="room-room-main-calendar-item">'+
                                     'room-room-main-calendar-item 1'+
                                 '</div>'+
                                 '<div class="room-room-main-calendar-item">'+
@@ -247,22 +162,90 @@ function displayRooms(){
                                     'room-room-main-calendar-item 4'+
                                 '</div>'+
                             '</div>'+
-                        '</div>'
+                        '</div>'+
+                    '</div>' +
+                '</div>';
+        
+        
+        } else if(rooms[room].date == fun2().toDateString()){
+            output += 
+                '<div class="room" style="display: block">' +
+                    '<div class="room-main">' +
+                        '<div class="room-main-horizontal">' +
+                            '<strong>' +
+                                'room-main-horizontal' +
+                                '</strong>' +
+                        '</div>' +
+                        '<div class="room-main-main">' +
+                            '<div class="room-main-main-calendar">' + 
+                                
+                            '</div>' +
+                            '<div class="room-main-main-calendar">' + 
+                                
+                            '</div>' +
+                            '<div class="room-main-main-calendar">' + 
+                                'room-main-main-calendar' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="room-room">'+
+                        '<div class="room-room-horizontal">' +
+                                '<div class="room-room-horizontal-item">' +
+                                    'room-room-horizontal-item 1' +
+                                '</div>'+
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 2'+
+                                '</div>'+
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 3'+
+                                '</div>' +
+                                '<div class="room-room-horizontal-item">'+
+                                    'room-room-horizontal-item 4'+
+                                '</div>' +
+                        '</div>' +
+                        '<div class="room-room-main">' +
+                            '<div class="room-room-main-calendar">' +
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                            '</div>'+
+                            '<div class="room-room-main-calendar">' +
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                            '</div>'+
 
-
-
-
-                        
-                    '</div>'+
-                    
-                '</div>' +
-            '</div>';
+                                '<div class="room-room-main-calendar">' +
+                                    '<div class="room-room-main-calendar-item">'+
+                                        'room-room-main-calendar-item 1'+
+                                    '</div>'+
+                                    '<div class="room-room-main-calendar-item">'+
+                                        'room-room-main-calendar-item 2'+
+                                    '</div>'+
+                                    '<div class="room-room-main-calendar-item">'+
+                                        'room-room-main-calendar-item 3'+
+                                    '</div>'+
+                                    '<div class="room-room-main-calendar-item">'+
+                                        'room-room-main-calendar-item 4'+
+                                    '</div>'+
+                                '</div>'+
+                        '</div>'+
+                    '</div>' +
+                '</div>';
         }
+        
+        
+        
         
         else document.getElementById('sub_NPC').innerHTML = '';
         
-        document.getElementById('sub_NPC').innerHTML = output;
+        
     }
+
+
+    document.getElementById('sub_NPC').innerHTML = output;
    
 }
 
@@ -320,5 +303,4 @@ function displayRooms(){
                                                         `<h1>${day_name[d_a_tomorrows_day]}</h1>` + `<p>${month_name[d_a_tomorrows_month] +' '+ d_a_tomorrows_date}</p>`;
 
     }
-
 
