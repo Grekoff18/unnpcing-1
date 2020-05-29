@@ -24,12 +24,15 @@ function left(){
     displayRooms();
 }
 
+
+// today + 1
 fun1()
 function fun1(){
     today3.setDate(today.getDate() + 1);
     return today3
 }
 
+// today + 2
 fun2()
 function fun2(){
     today4.setDate(today.getDate() + 2);
@@ -149,6 +152,13 @@ function displayRooms(){
 
                         '<div class="room-room-main">' +
                             '<div class="room-room-main-calendar">' +
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item"></div>'+
+                            '</div>'+
+
+                            '<div class="room-room-main-calendar">' +
                                 '<div class="room-room-main-calendar-item">'+
                                     'room-room-main-calendar-item 1'+
                                 '</div>'+
@@ -162,7 +172,13 @@ function displayRooms(){
                                     'room-room-main-calendar-item 4'+
                                 '</div>'+
                             '</div>'+
+
                         '</div>'+
+
+                        
+
+
+
                     '</div>' +
                 '</div>';
         
@@ -234,18 +250,13 @@ function displayRooms(){
                         '</div>'+
                     '</div>' +
                 '</div>';
-        }
+        } else document.getElementById('sub_NPC').innerHTML = '';
         
-        
-        
-        
-        else document.getElementById('sub_NPC').innerHTML = '';
-        
-        
+        document.getElementById('sub_NPC').innerHTML = output;
     }
 
 
-    document.getElementById('sub_NPC').innerHTML = output;
+    
    
 }
 
