@@ -1,9 +1,11 @@
 displayRooms();
 
 var today = new Date();
+var today1 = new Date();
 var today2 = new Date();
 var today3 = new Date();
 var today4 = new Date();
+var today5 = new Date();
 
 
 var rooms = {
@@ -25,18 +27,28 @@ function left(){
 }
 
 
+function fun(today){
+    today1.setDate(today.getDate())
+    return today1
+}
+
 // today + 1
-fun1()
-function fun1(){
+function fun1(today){
     today3.setDate(today.getDate() + 1);
     return today3
 }
 
 // today + 2
-fun2()
-function fun2(){
+function fun2(today){
     today4.setDate(today.getDate() + 2);
+    console.log(today4)
     return today4
+    
+}
+
+function fun3(today){
+    today5.setDate(today.getDate() + 3);
+    return today5
 }
 
 
@@ -47,7 +59,6 @@ function addRoom(){
         date: today.toDateString(),
     }
     displayRooms();
-    console.log(rooms)
     
 }
 
@@ -56,10 +67,10 @@ function displayRooms(){
     console.log('display')
     let output = '';
     for(let room in rooms){
-        console.log(rooms[room].date)
+        console.log(rooms[room].date + '59s line the beginning of the for')
         
         
-        if(rooms[room].date == today.toDateString()){
+        if(rooms[room].date == fun(today).toDateString()){
             output += 
             '<div class="room" style="display: block">' +
                     '<div class="room-main">' +
@@ -108,24 +119,25 @@ function displayRooms(){
                             '</div>' +
                         '</div>' +
                 '</div>';
+                console.log('today displayed')
 
             
             
+        // 
         
-        
-        } else if(rooms[room].date == fun1().toDateString()){
+        } else if(rooms[room].date == fun1(today).toDateString()){
             output += 
             '<div class="room" style="display: block">' +
                     '<div class="room-main">' +
-                        '<div class="room-main-horizontal">' +
-                            '<strong>' +
-                                'room-main-horizontal' +
-                                '</strong>' +
+                        '<div class="room-main-horizontal" style="background-color: transparent; border: 0px;">' +
+                            
                         '</div>' +
                         '<div class="room-main-main">' +
-                            '<div class="room-main-main-calendar">' + 
-                                
-                            '</div>' +
+                        '<div class="room-main-horizontal" style="width: calc(100% / 3)">' +
+                            '<strong>' +
+                                'room-main-horizontal' +
+                            '</strong>' +
+                        '</div>' +
                             '<div class="room-main-main-calendar">' + 
                                 'room-main-main-calendar' +
                             '</div>' +
@@ -136,26 +148,34 @@ function displayRooms(){
                     '<div class="room-room">'+
 
                         '<div class="room-room-horizontal">' +
-                                '<div class="room-room-horizontal-item">' +
-                                    'room-room-horizontal-item 1' +
+                                '<div class="room-room-horizontal-item" style="background-color: transparent; border: 0px;">' +
+                                    
                                 '</div>'+
-                                '<div class="room-room-horizontal-item">'+
-                                    'room-room-horizontal-item 2'+
+                                '<div class="room-room-horizontal-item" style="background-color: transparent; border: 0px;">'+
+                                    
                                 '</div>'+
-                                '<div class="room-room-horizontal-item">'+
-                                    'room-room-horizontal-item 3'+
+                                '<div class="room-room-horizontal-item" style="background-color: transparent; border: 0px;">'+
+                                   
                                 '</div>' +
-                                '<div class="room-room-horizontal-item">'+
-                                    'room-room-horizontal-item 4'+
+                                '<div class="room-room-horizontal-item" style="background-color: transparent; border: 0px;">'+
+                                    
                                 '</div>' +
                         '</div>' +
 
                         '<div class="room-room-main">' +
                             '<div class="room-room-main-calendar">' +
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
+                            '<div class="room-room-horizontal-item">' +
+                            'room-room-horizontal-item 1' +
+                        '</div>'+
+                        '<div class="room-room-horizontal-item">'+
+                            'room-room-horizontal-item 2'+
+                        '</div>'+
+                        '<div class="room-room-horizontal-item">'+
+                            'room-room-horizontal-item 3'+
+                        '</div>' +
+                        '<div class="room-room-horizontal-item">'+
+                            'room-room-horizontal-item 4'+
+                        '</div>' +
                             '</div>'+
 
                             '<div class="room-room-main-calendar">' +
@@ -181,56 +201,66 @@ function displayRooms(){
 
                     '</div>' +
                 '</div>';
+                console.log('today + 1 displayed')
         
         
-        } else if(rooms[room].date == fun2().toDateString()){
+        } else if(rooms[room].date == fun2(today).toDateString()){
             output += 
-                '<div class="room" style="display: block">' +
+                '<div class="room">' +
                     '<div class="room-main">' +
-                        '<div class="room-main-horizontal">' +
+                        '<div class="room-main-horizontal" style="background-color: transparent; border: 0px;">' +
+
+                        '</div>' +
+                        '<div class="room-main-main">' +
+                            '<div class="room-main-main-calendar" style="border: 0px;">' + 
+                                
+                            '</div>' +
+                            '<div class="room-main-horizontal" style="width: calc(100%/3)">' +
                             '<strong>' +
                                 'room-main-horizontal' +
                                 '</strong>' +
                         '</div>' +
-                        '<div class="room-main-main">' +
-                            '<div class="room-main-main-calendar">' + 
-                                
-                            '</div>' +
-                            '<div class="room-main-main-calendar">' + 
-                                
-                            '</div>' +
                             '<div class="room-main-main-calendar">' + 
                                 'room-main-main-calendar' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
+
                     '<div class="room-room">'+
                         '<div class="room-room-horizontal">' +
-                                '<div class="room-room-horizontal-item">' +
-                                    'room-room-horizontal-item 1' +
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">' +
+                                    
                                 '</div>'+
-                                '<div class="room-room-horizontal-item">'+
-                                    'room-room-horizontal-item 2'+
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">'+
+                                    
                                 '</div>'+
-                                '<div class="room-room-horizontal-item">'+
-                                    'room-room-horizontal-item 3'+
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">'+
+                                    
                                 '</div>' +
-                                '<div class="room-room-horizontal-item">'+
-                                    'room-room-horizontal-item 4'+
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">'+
+                                    
                                 '</div>' +
                         '</div>' +
                         '<div class="room-room-main">' +
                             '<div class="room-room-main-calendar">' +
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
                             '</div>'+
                             '<div class="room-room-main-calendar">' +
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
-                                '<div class="room-room-main-calendar-item"></div>'+
+                            '<div class="room-room-horizontal-item">' +
+                                'room-room-horizontal-item 1' +
+                            '</div>'+
+                            '<div class="room-room-horizontal-item">'+
+                                'room-room-horizontal-item 2'+
+                            '</div>'+
+                            '<div class="room-room-horizontal-item">'+
+                                'room-room-horizontal-item 3'+
+                            '</div>' +
+                            '<div class="room-room-horizontal-item">'+
+                                'room-room-horizontal-item 4'+
+                            '</div>' +
                             '</div>'+
 
                                 '<div class="room-room-main-calendar">' +
@@ -250,11 +280,86 @@ function displayRooms(){
                         '</div>'+
                     '</div>' +
                 '</div>';
-        } else document.getElementById('sub_NPC').innerHTML = '';
-        
-        document.getElementById('sub_NPC').innerHTML = output;
-    }
+                console.log('today + 2 displayed')
 
+        } else if(rooms[room].date == fun3(today).toDateString()){
+            
+            output +=
+            '<div class="room">' +
+                    '<div class="room-main">' +
+                        '<div class="room-main-horizontal" style="background-color: transparent; border: 0px;">' +
+
+                        '</div>' +
+                        '<div class="room-main-main">' +
+                            '<div class="room-main-main-calendar" style="border: 0px;">' + 
+                                
+                            '</div>' +
+                            '<div class="room-main-main-calendar" style="border: 0px;">' + 
+                                
+                            '</div>' +
+                        '<div class="room-main-horizontal" style="width: calc(100%/3)">' +
+                        '<strong>' +
+                            'room-main-horizontal' +
+                            '</strong>' +
+                    '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<div class="room-room">'+
+                        '<div class="room-room-horizontal">' +
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">' +
+                                    
+                                '</div>'+
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">'+
+                                    
+                                '</div>'+
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">'+
+                                    
+                                '</div>' +
+                                '<div class="room-room-horizontal-item" style="border: 0px; background-color: transparent">'+
+                                    
+                                '</div>' +
+                        '</div>' +
+                        '<div class="room-room-main">' +
+                            '<div class="room-room-main-calendar">' +
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                            '</div>'+
+                            '<div class="room-room-main-calendar">' +
+                            '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                                '<div class="room-room-main-calendar-item" style="border: 0px; background-color: transparent"></div>'+
+                            '</div>'+
+
+                                '<div class="room-room-main-calendar">' +
+                                        '<div class="room-room-horizontal-item">' +
+                                        'room-room-horizontal-item 1' +
+                                    '</div>'+
+                                    '<div class="room-room-horizontal-item">'+
+                                        'room-room-horizontal-item 2'+
+                                    '</div>'+
+                                    '<div class="room-room-horizontal-item">'+
+                                        'room-room-horizontal-item 3'+
+                                    '</div>' +
+                                    '<div class="room-room-horizontal-item">'+
+                                        'room-room-horizontal-item 4'+
+                                    '</div>' +
+                                '</div>'+
+                        '</div>'+
+                    '</div>' +
+                '</div>';
+
+        }   else {document.getElementById('sub_NPC').innerHTML = '';
+        console.log('none displayed')}
+        
+        
+        
+    }
+    document.getElementById('sub_NPC').innerHTML = output;
+    
 
     
    
