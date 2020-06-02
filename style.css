@@ -13,17 +13,13 @@ body {
 }
 
 .calendarNPC {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 80%;
   float: right;
   background-color: white;
   height: 900px;
   margin-top: 79px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .calendarNPC div {
@@ -40,35 +36,29 @@ body {
 }
 
 .room-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 20%;
 }
 
-.room-main-horizontal {
+.horizontal_room {
   width: 20%;
   background-color: aquamarine;
   border: 1px solid black;
 }
 
-.room-main-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.main_room {
   display: flex;
   width: 80%;
   float: right;
 }
 
-.room-main-main-calendar {
+.nested_room {
   width: calc(100% / 3);
   border: 1px solid black;
 }
 
-.room-room {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.sub_room {
   display: flex;
   float: bottom;
   height: 80%;
@@ -76,39 +66,37 @@ body {
   left: 18px;
 }
 
-.room-room-horizontal {
+.horizontal_sub_room {
   height: 100%;
   width: 20%;
 }
 
-.room-room-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.main_sub_room {
   display: flex;
   width: 80%;
   float: right;
   height: 100%;
 }
 
-.room-room-main-calendar {
+.main_nested_sub_room {
   width: calc(100% / 3);
 }
 
-.room-room-horizontal-item {
+.horizontal_sub_room-item {
   height: calc(100% / 4);
   width: 100%;
   border: 1px solid black;
   background-color: #F0F0F0;
 }
 
-.room-room-main-calendar-item {
+.main_sub_room-item {
   height: calc(100% / 4);
   width: 100%;
   border: 1px solid black;
   background-color: white;
 }
 
-.room-room-main-calendar-item {
+.main_sub_room-item {
   padding-left: 10px;
 }
 
@@ -117,22 +105,38 @@ body {
   padding-left: 15px;
 }
 
-#right {
-  color: lightgray;
+.btn_group {
+  width: 12%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+#right {
+  width: 48%;
+  height: 30px;
+  text-align: center;
+  color: gray;
+  border: 1px solid gray;
+}
 #right:hover {
   cursor: pointer;
-  color: red;
+  color: black;
+  border: 1px solid black;
 }
 
 #left {
-  color: lightgray;
+  width: 48%;
+  height: 30px;
+  text-align: center;
+  color: gray;
+  border: 1px solid gray;
 }
-
 #left:hover {
   cursor: pointer;
-  color: red;
+  color: black;
+  border: 1px solid black;
 }
 
 .logo {
@@ -143,7 +147,6 @@ body {
   color: gray;
   background-color: lightgray;
 }
-
 .logo:hover {
   background-color: gray;
   color: lightgray;
@@ -160,4 +163,3 @@ button {
 button:focus {
   outline: 0;
 }
-/*# sourceMappingURL=style.css.map */

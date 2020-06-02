@@ -21,8 +21,6 @@ body {
     margin-top: 79px;
     justify-content: space-between;
 
-    
-    
 }
 
 .calendarNPC div {
@@ -40,30 +38,30 @@ body {
 
 .room-main {
     display: flex;
-    
+
     width: 100%;
     height: 20%;
 
 }
 
-.room-main-horizontal {
+.horizontal_room {
     width: 20%;
     background-color: aquamarine;
     border: 1px solid black;
 }
 
-.room-main-main {
+.main_room {
     display: flex;
     width: 80%;
     float: right;
 }
 
-.room-main-main-calendar {
+.nested_room {
     width: calc(100% / 3);
     border: 1px solid black;
 }
 
-.room-room {
+.sub_room {
     display: flex;
     float: bottom;
     height: 80%;
@@ -72,12 +70,12 @@ body {
 
 }
 
-.room-room-horizontal {
+.horizontal_sub_room {
     height: 100%;
     width: 20%;
 }
 
-.room-room-main {
+.main_sub_room {
     display: flex;
     width: 80%;
     float: right;
@@ -85,25 +83,25 @@ body {
 }
 
 
-.room-room-main-calendar {
+.main_nested_sub_room {
     width: calc(100% / 3);
 }
 
-.room-room-horizontal-item {
+.horizontal_sub_room-item {
     height: calc(100% / 4);
     width: 100%;
     border: 1px solid black;
     background-color: #F0F0F0;
 }
 
-.room-room-main-calendar-item {
+.main_sub_room-item {
     height: calc(100% / 4);
     width: 100%;
     border: 1px solid black;
     background-color: white;
 }
 
-.room-room-main-calendar-item{
+.main_sub_room-item{
     padding-left: 10px;
 }
 
@@ -113,18 +111,36 @@ body {
     padding-left: 15px;
 }
 
+.btn_group {
+    width: 12%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #right{
-    color: lightgray;
+    width: 48%;
+    height: 30px;
+    text-align: center;
+    color: gray;
+    border: 1px solid gray;
     &:hover{
         cursor: pointer;
-        color: red;
+        color: black;
+        border: 1px solid black;
     }
 }
 #left{
-    color: lightgray;
+    width: 48%;
+    height: 30px;
+    text-align: center;
+    color: gray;
+    border: 1px solid gray;
     &:hover{
         cursor: pointer;
-        color: red;
+        color: black;
+        border: 1px solid black;
     }
 }
 
